@@ -5,10 +5,6 @@ WORKDIR /app
 COPY package.json .
 RUN yarn
 
-# --- 
-
-FROM nginx
-
 COPY . .
 
-CMD [ "nginx", "run" ]
+CMD [ "yarn", "start" ]
