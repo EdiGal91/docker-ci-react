@@ -12,5 +12,5 @@ RUN yarn build
 # we care about /app/build <-- to serve by nginx
 
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
